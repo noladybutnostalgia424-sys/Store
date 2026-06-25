@@ -1,0 +1,31 @@
+{
+  "file_type": "black_store_ai_session",
+  "metadata": {
+    "version": "1.0",
+    "encryption": "AES-256",
+    "timestamp": "2026-06-26T01:07:00Z"
+  },
+  "ai_model_config": {
+    "ai_name": "gemini", 
+    "ai_provider": "Google",
+    "system_instruction_encrypted": "U2FsdGVkX19vN3R4W...[تعليمات النظام مشفرة]"
+  },
+  "chat_payload": [
+    {
+      "message_number": 1,
+      "sender": "user",
+      "content_encrypted": "U2FsdGVkX1+M3pTcWxle...[رسالتك للذكاء الاصطناعي مشفرة]"
+    },
+    {
+      "message_number": 2,
+      "sender": "ai_assistant",
+      "content_encrypted": "U2FsdGVkX19zM2NyZXRm...[رد الذكاء الاصطناعي مشفر تماماً]"
+    }
+  ],
+  "encrypted_files": [
+    {
+      "file_purpose": "context_document",
+      "file_data_encrypted": "U2FsdGVkX1/V3R4SGFz...[بيانات الملف المرفق مشفرة]"
+    }
+  ]
+}
