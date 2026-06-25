@@ -1,0 +1,33 @@
+{
+  "file_metadata": {
+    "version": "1.0",
+    "platform": "BLACK STORE AI",
+    "encryption_algorithm": "AES-256",
+    "created_at": "2026-06-26T01:00:00Z"
+  },
+  "session_info": {
+    "selected_model": "gemini", 
+    "user_identity_encrypted": "U2FsdGVkX19vN...[اسم المستخدم مشفر]"
+  },
+  "chat_history": [
+    {
+      "message_id": "msg_001",
+      "sender": "user",
+      "timestamp": "2026-06-26T01:01:00Z",
+      "content_encrypted": "U2FsdGVkX18zS...[نص رسالة المستخدم مشفر]"
+    },
+    {
+      "message_id": "msg_002",
+      "sender": "ai_assistant",
+      "timestamp": "2026-06-26T01:01:05Z",
+      "content_encrypted": "U2FsdGVkX19mR...[رد الذكاء الاصطناعي مشفر]"
+    }
+  ],
+  "attachments": [
+    {
+      "file_name_encrypted": "U2FsdGVkX1+...[اسم الملف المرفق مشفر]",
+      "file_type": "image/png",
+      "file_data_encrypted": "U2FsdGVkX18bV...[بيانات الملف بالكامل مشفرة]"
+    }
+  ]
+}
