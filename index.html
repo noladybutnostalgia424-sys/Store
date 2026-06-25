@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Store AI</title>
+    <script src="https://cloudflare.com"></script>
+    <script src="crypto.js"></script>
     <style>
-        body { background-color: #0c0c0c; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px; margin: 0; }
-        h1 { color: #ffffff; margin-bottom: 30px; letter-spacing: 1px; }
+        body { background-color: #0c0c0c; color: #e0e0e0; font-family: sans-serif; text-align: center; padding: 20px; margin: 0; }
+        h1 { color: #ffffff; margin-bottom: 30px; }
         .chat-container { width: 90%; max-width: 700px; margin: auto; background: #161616; padding: 25px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); border: 1px solid #222; }
         select, input, button { width: 100%; padding: 12px; margin-top: 15px; border-radius: 8px; border: 1px solid #333; background: #222; color: #fff; box-sizing: border-box; font-size: 16px; }
         select:focus, input:focus { border-color: #007bff; outline: none; }
@@ -21,57 +22,20 @@
     </style>
 </head>
 <body>
-
     <h1>منصة BLACK STORE للذكاء الاصطناعي</h1>
-    
     <div class="chat-container">
-        <!-- قائمة اختيار الذكاء الاصطناعي الحقيقي -->
         <select id="ai-select">
             <option value="chatgpt">ChatGPT (OpenAI)</option>
             <option value="gemini">Gemini (Google)</option>
             <option value="claude">Claude (Anthropic)</option>
             <option value="grok">Grok (xAI)</option>
         </select>
-
-        <!-- شاشة عرض المحادثة والمصادر -->
         <div id="chat-output" class="chat-output">
             <div class="message ai-msg">مرحباً بك في بلاك ستور الموثق. اختر النموذج واكتب رسالتك، وسنقوم بجلب المعلومات مع مصادرها تلقائياً.</div>
         </div>
-
-        <!-- صندوق الكتابة والأزرار -->
         <input type="text" id="user-input" placeholder="اكتب سؤالك أو ضع رابط الموقع هنا...">
         <button onclick="sendMessage()">إرسال الأمر</button>
     </div>
-
-    <script>
-        function sendMessage() {
-            const inputField = document.getElementById('user-input');
-            const chatOutput = document.getElementById('chat-output');
-            const aiSelected = document.getElementById('ai-select').value;
-            const text = inputField.value.trim();
-
-            if (text === '') return;
-
-            // 1. عرض رسالة المستخدم في الشاشة
-            chatOutput.innerHTML += `<div class="message user-msg">${text}</div>`;
-            inputField.value = '';
-            chatOutput.scrollTop = chatOutput.scrollHeight;
-
-            // 2. محاكاة الاتصال بالـ API الحقيقي وجلب المصادر تلقائياً
-            setTimeout(() => {
-                let aiResponse = `هذه إجابة تجريبية من نموذج [${aiSelected.toUpperCase()}]. عند ربط مفاتيح الـ API الخاصة بك في الخطوة القادمة، سيقوم النموذج بقراءة الروابط والبحث في الإنترنت تلقائياً.`;
-                let mockSource = "https://wikipedia.org"; // مثال على موقع المصدر المفحوص
-
-                chatOutput.innerHTML += `
-                    <div class="message ai-msg">
-                        ${aiResponse}
-                        <a href="${mockSource}" target="_blank" class="source-link">🔗 تم التحقق عبر موقع: ${mockSource}</a>
-                    </div>
-                `;
-                chatOutput.scrollTop = chatOutput.scrollHeight;
-            }, 1000);
-        }
-    </script>
+    <script src="javascript"></script>
 </body>
 </html>
-
